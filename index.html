@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Natalie's Kindle</title>
+	<style type="text/css">
+	html,
+	body {
+		background-color: white;
+		color: black;
+		font-family: serif;
+		font-size: 16pt;
+		margin: 0;
+		padding: 0;
+	}
+	body {
+		padding-bottom: 1em;
+	}
+	a:link,
+	a:visited,
+	a:hover,
+	a:focus,
+	a:active {
+		color: black;
+		text-decoration: none !important;
+		outline: none;
+		border: none;
+	}
+	h1 {
+		font-size: 1.5em;
+		margin: 15px 10px 0 10px;
+	}
+	h2 {
+		background-color: black;
+		color: white;
+		padding: 3px 10px 5px 10px;
+		font-size: 1em;
+		margin: 15px 0 0 0;
+	}
+	h2 .shortcut {
+		float: right;
+		font-size: 0.8em;
+		font-weight: normal;
+		color: #999;
+	}
+	h2 .shortcut span {
+		color: white;
+		display: inline;
+		margin: 0 3px;
+		position: relative;
+		top: -1px;
+	}
+	h2.first {
+		margin-top: 0;
+	}
+	ul.links {
+		margin: 0;
+		padding: 0;
+		list-style-type: none;
+	}
+	ul.links li {
+		padding: 0;
+		margin: 0;
+	}
+	ul.links a:link,
+	ul.links a:visited,
+	ul.links a:hover,
+	ul.links a:focus,
+	ul.links a:active {
+		padding: 3px 10px 5px 10px;
+		margin: 0;
+		display: block;
+		background-color: white;
+	}
+	ul.links a:hover,
+	ul.links a:focus,
+	ul.links a:active {
+		background-color: #CCC;
+	}
+	form.full {
+		margin: 10px;
+	}
+	form.full input.text {
+		display: block;
+		width: 540px;
+		padding: 10px;
+		border-width: 1px;
+		border-style: solid;
+		border-color: #999 #CCC #CCC #999;
+		background-color: #EEE;
+		color: black;
+	}
+	form.full input.submit {
+		text-align: center;
+		background-color: #CCC;
+		font-weight: bold;
+		padding: 5px 10px;
+		display: block;
+		margin-top: 10px;
+		font-size: 1em;
+		border-width: 1px;
+		border-style: solid;
+		border-color: #CCC #999 #999 #CCC;
+		width: 562px;
+	}
+	</style>
+</head>
+<body>
+	<h2 class="first">The Essentials</h2>
+	<ul class="links">
+		<li><a href="https://twitter.com/">Twitter</a></li>
+		<li><a href="https://mail.google.com/">Gmail</a></li>
+		
+	</ul>
+	<h2>Travel</h2>
+	<ul class="links">
+		<li><a href="http://maps.google.com/">Maps</a></li>
+		<li><a href="https://www.tripit.com/">Tripit</a></li>
+		<li><a href="http://www.xe.com/">Currency Converter</a></li>
+		<li><a href="http://translate.google.com/">Google Translate</a>
+		<li><a href="http://flightaware.com/">Flight tracker</a></li>
+	</ul>
+	<h2>News</h2>
+	<ul class="links">
+		<li><a href="http://news.ycombinator.com/">Hacker News</a></li>
+		<li><a href="http://www.metafilter.com/">Meta Filter</a></li>
+		<li><a href="http://www.bbc.co.uk/news/">BBC News</a></li>
+	</ul>
+	<h2>Search Google <span class="shortcut">[<span>g</span>]</span></h2>
+	<form action="http://www.google.com/search" method="get" accept-charset="utf-8" class="full">
+		<div><input type="text" name="q" value="" class="text" id="google-search">
+		<input type="submit" value="Search" class="submit"></div>
+	</form>
+	<h2>Search Wikipedia <span class="shortcut">[<span>w</span>]</span></h2>
+	<form action="http://www.google.com/search" method="get" accept-charset="utf-8" class="full">
+		<div>
+			<input type="text" name="q" value="" class="text" id="wikipedia-search">
+			<input type="submit" value="Search" class="submit">
+			<input type="hidden" name="sitesearch" value="en.wikipedia.org">
+		</div>
+	</form>
+	<h2>Show me a map <span class="shortcut">[<span>m</span>]</span></h2>
+	<form action="http://maps.googleapis.com/maps/api/staticmap" method="get" accept-charset="utf-8" class="full">
+		<div>
+			<input type="text" name="center" value="" class="text" id="map-search">
+			<input type="submit" value="Search" class="submit">
+			<input type="hidden" name="sensor" value="false">
+			<input type="hidden" name="zoom" value="15">
+			<input type="hidden" name="scale" value="2">
+			<input type="hidden" name="size" value="281x353">
+		</div>
+	</form>
+	<h2>Currency convert <span class="shortcut">[<span>c</span>]</span></h2>
+	<form action="http://www.xe.com/ucc/convert/" method="get">
+		<input name="Amount" type="text" value="1" size="7" id="currency-amount">
+		<select name="From">
+			<option value='AUD'>AUD - Australian Dollar</option>
+			<option value='CAD'>CAD - Canadian Dollar</option>
+			<option value='CHF'>CHF - Swiss Franc</option>
+			<option value='CNY'>CNY - Chinese Yuan Renminbi</option>
+			<option value='DKK'>DKK - Danish Krone</option>
+			<option value='EUR'>EUR - Euro</option>
+			<option value='GBP'>GBP - British Pound</option>
+			<option value='HKD'>HKD - Hong Kong Dollar</option>
+			<option value='HUF'>HUF - Hungarian Forint</option>
+			<option value='INR'>INR - Indian Rupee</option>
+			<option value='JPY'>JPY - Japanese Yen</option>
+			<option value='MXN'>MXN - Mexican Peso</option>
+			<option value='MYR'>MYR - Malaysian Ringgit</option>
+			<option value='NOK'>NOK - Norwegian Krone</option>
+			<option value='NZD'>NZD - New Zealand Dollar</option>
+			<option value='PHP'>PHP - Philippine Peso</option>
+			<option value='RUB'>RUB - Russian Ruble</option>
+			<option value='SEK'>SEK - Swedish Krona</option>
+			<option value='SGD'>SGD - Singapore Dollar</option>
+			<option value='THB'>THB - Thai Baht</option>
+			<option value='TRY'>TRY - Turkish Lira</option>
+			<option value='USD' selected="selected">USD - US Dollar</option>
+			<option value='ZAR'>ZAR - South African Rand</option>
+		</select>
+		to
+		<select name="To">
+			<option value='AUD'>AUD - Australian Dollar</option>
+			<option value='CAD'>CAD - Canadian Dollar</option>
+			<option value='CHF'>CHF - Swiss Franc</option>
+			<option value='CNY'>CNY - Chinese Yuan Renminbi</option>
+			<option value='DKK'>DKK - Danish Krone</option>
+			<option value='EUR'>EUR - Euro</option>
+			<option value='GBP' selected="selected">GBP - British Pound</option>
+			<option value='HKD'>HKD - Hong Kong Dollar</option>
+			<option value='HUF'>HUF - Hungarian Forint</option>
+			<option value='INR'>INR - Indian Rupee</option>
+			<option value='JPY'>JPY - Japanese Yen</option>
+			<option value='MXN'>MXN - Mexican Peso</option>
+			<option value='MYR'>MYR - Malaysian Ringgit</option>
+			<option value='NOK'>NOK - Norwegian Krone</option>
+			<option value='NZD'>NZD - New Zealand Dollar</option>
+			<option value='PHP'>PHP - Philippine Peso</option>
+			<option value='RUB'>RUB - Russian Ruble</option>
+			<option value='SEK'>SEK - Swedish Krona</option>
+			<option value='SGD'>SGD - Singapore Dollar</option>
+			<option value='THB'>THB - Thai Baht</option>
+			<option value='TRY'>TRY - Turkish Lira</option>
+			<option value='USD'>USD - US Dollar</option>
+			<option value='ZAR'>ZAR - South African Rand</option>
+		</select>
+		<input type="submit" value="Convert">
+	</form>
+	
+<script>
+// https://raw.github.com/madrobby/keymaster/master/keymaster.min.js
+(function(a){function m(a,b,c){a.addEventListener?a.addEventListener(b,c,!1):a.attachEvent&&a.attachEvent("on"+b,function(){c(window.event)})}function l(a){e=a||"all"}function k(a,b,d){var e,h,i,j;d===undefined&&(d=b,b="all"),a=a.replace(/\s/g,""),e=a.split(","),e[e.length-1]==""&&(e[e.length-2]+=",");for(i=0;i<e.length;i++){h=[],a=e[i].split("+");if(a.length>1){h=a.slice(0,a.length-1);for(j=0;j<h.length;j++)h[j]=f[h[j]];a=[a[a.length-1]]}a=a[0],a=g[a]||a.toUpperCase().charCodeAt(0),a in c||(c[a]=[]),c[a].push({shortcut:e[i],scope:b,method:d,key:e[i],mods:h})}}function j(a){var b=a.keyCode,c;if(b==93||b==224)b=91;if(b in d){d[b]=!1;for(c in f)f[c]==b&&(k[c]=!1)}}function i(a){var b,g,i,j,l,m;g=(a.target||a.srcElement).tagName,b=a.keyCode;if(b==93||b==224)b=91;if(b in d){d[b]=!0;for(j in f)f[j]==b&&(k[j]=!0)}else{if(g=="INPUT"||g=="SELECT"||g=="TEXTAREA")return;if(!(b in c))return;for(l=0;l<c[b].length;l++){i=c[b][l];if(i.scope==e||i.scope=="all"){m=i.mods.length>0;for(j in d)if(!d[j]&&h(i.mods,+j)>-1||d[j]&&h(i.mods,+j)==-1)m=!1;(i.mods.length==0&&!d[16]&&!d[18]&&!d[17]&&!d[91]||m)&&i.method(a,i)===!1&&(a.preventDefault?a.preventDefault():a.returnValue=!1,a.stopPropagation&&a.stopPropagation(),a.cancelBubble&&(a.cancelBubble=!0))}}}}function h(a,b){var c=a.length;while(c--)if(a[c]===b)return c;return-1}var b,c={},d={16:!1,18:!1,17:!1,91:!1},e="all",f={"⇧":16,shift:16,"⌥":18,alt:18,option:18,"⌃":17,ctrl:17,control:17,"⌘":91,command:91},g={backspace:8,tab:9,clear:12,enter:13,"return":13,esc:27,escape:27,space:32,left:37,up:38,right:39,down:40,del:46,"delete":46,home:36,end:35,pageup:33,pagedown:34,",":188,".":190,"/":191,"`":192,"-":189,"=":187,";":186,"'":222,"[":219,"]":221,"\\":220};for(b=1;b<20;b++)f["f"+b]=111+b;for(b in f)k[b]=!1;m(document,"keydown",i),m(document,"keyup",j),a.key=k,a.key.setScope=l,typeof module!="undefined"&&(module.exports=key)})(this)
+</script>
+<script>
+function focusIt(id) {
+	return function() {
+		document.getElementById(id).focus();
+		document.getElementById(id).value = '';
+		return false;
+	}
+}
+key('g', focusIt('google-search'));
+key('m', focusIt('map-search'));
+key('w', focusIt('wikipedia-search'));
+key('c', focusIt('currency-amount'));
+</script>
+</body>
